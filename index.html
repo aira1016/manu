@@ -1,51 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>Manu ❤️ Bubby</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manu ❤️ Bubby — Private Memory Vault</title>
     <link rel="stylesheet" href="style.css">
+    <script src="config.js" defer></script>
+    <script src="vault.js" defer></script>
 </head>
-
 <body>
 
-
-
-
-    <div class="container">
-
-        <h1 class="title">Manu <span class="heart">❤️</span> Bubby</h1>
-
-        <div class="profiles">
-            <div class="card">
-                <a href="nanna.html" class="photo-link">
+    <!-- SCREEN 1 — PRIVATE LANDING / WELCOME -->
+    <section id="screen-landing" class="vault-screen">
+        <div class="landing-container">
+            <div id="bf-card" class="landing-card" title="Click to enter secret vault">
+                <div class="landing-photo-frame">
                     <img src="Snapchat-242423302 (1).jpg" alt="Manoj">
-                </a>
-
-                <h2>Manoj</h2>
-                <p>DOB: 08/09/2001</p>
-                <p>Nick Name: <b>Manu</b></p>
+                </div>
+                <h1 class="landing-name">Manoj</h1>
+                <div class="landing-dob">08 / 09 / 2001</div>
+                <p class="landing-quote">"Some memories are meant for two."</p>
+                <button id="enter-world-btn" class="cta-button">Enter Our World ✨</button>
             </div>
+        </div>
+    </section>
 
-            <div class="card">
-                <a href="bubby.html" class="photo-link">
-                    <img src="WhatsApp Image 2025-12-19 at 6.25.28 PM.jpeg" alt="Prasanna">
-                </a>
+    <!-- SCREEN 2 & 3 — PRIVATE PIN LOCK -->
+    <section id="screen-pin" class="vault-screen" style="display: none;">
+        <div class="pin-container">
+            <div class="pin-card">
+                <h2 class="pin-title">Only We Know The Way</h2>
+                <p class="pin-subtitle">Enter our secret code.</p>
+                
+                <div id="pin-display-dots" class="pin-dots">
+                    <div class="pin-dot"></div>
+                    <div class="pin-dot"></div>
+                    <div class="pin-dot"></div>
+                    <div class="pin-dot"></div>
+                </div>
 
-                <h2>Prasanna</h2>
-                <p>DOB: 22/06/2005</p>
-                <p>Nick Name: <b>Bubby</b></p>
+                <div id="pin-status-msg" class="pin-status"></div>
+
+                <div id="pin-keypad" class="keypad-grid">
+                    <button class="key-btn" data-key="1">1</button>
+                    <button class="key-btn" data-key="2">2</button>
+                    <button class="key-btn" data-key="3">3</button>
+                    <button class="key-btn" data-key="4">4</button>
+                    <button class="key-btn" data-key="5">5</button>
+                    <button class="key-btn" data-key="6">6</button>
+                    <button class="key-btn" data-key="7">7</button>
+                    <button class="key-btn" data-key="8">8</button>
+                    <button class="key-btn" data-key="9">9</button>
+                    <button class="key-btn action-key" data-key="del">DEL</button>
+                    <button class="key-btn" data-key="0">0</button>
+                    <button class="key-btn action-key" data-key="clear">CLR</button>
+                </div>
             </div>
-
         </div>
+    </section>
 
-        <div class="love-date">
-            <p>Our Love Started On</p>
-            <a href="story.html">❤️ 16/10/2021 ❤️</a>
-        </div>
+    <!-- SCREEN 4 — EXISTING WEBSITE (REDESIGNED) -->
+    <section id="screen-vault" class="vault-screen" style="display: none;">
+        <!-- FLOATING NAVIGATION BAR -->
+        <header class="vault-nav-wrapper">
+            <nav class="vault-nav">
+                <a href="index.html" class="nav-link active">Home Hub</a>
+                <a href="nanna.html" class="nav-link">Manu 💙</a>
+                <a href="bubby.html" class="nav-link">Bubby 💖</a>
+                <a href="story.html" class="nav-link">Our Story 💞</a>
+                <button id="nav-lock-btn" class="nav-link nav-lock-btn">Lock Vault 🔒</button>
+            </nav>
+        </header>
 
-    </div>
+        <main class="vault-content">
+            <div class="container">
+                <h1 class="title">Manu <span class="heart">❤️</span> Bubby</h1>
+
+                <div class="profiles">
+                    <div class="card">
+                        <a href="nanna.html" class="photo-link">
+                            <img src="Snapchat-242423302 (1).jpg" alt="Manoj">
+                        </a>
+
+                        <h2>Manoj</h2>
+                        <p>DOB: 08/09/2001</p>
+                        <p>Nick Name: <b>Manu</b></p>
+                    </div>
+
+                    <div class="card">
+                        <a href="bubby.html" class="photo-link">
+                            <img src="WhatsApp Image 2025-12-19 at 6.25.28 PM.jpeg" alt="Prasanna">
+                        </a>
+
+                        <h2>Prasanna</h2>
+                        <p>DOB: 22/06/2005</p>
+                        <p>Nick Name: <b>Bubby</b></p>
+                    </div>
+                </div>
+
+                <div class="love-date">
+                    <p>Our Love Started On</p>
+                    <a href="story.html">❤️ 16/10/2021 ❤️</a>
+                </div>
+            </div>
+        </main>
+    </section>
 
 </body>
-
 </html>
